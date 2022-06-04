@@ -25,7 +25,6 @@ public class NetworkUtils {
                     .build();
             URL requestURL = new URL(builtURI.toString());
             urlConnection = (HttpURLConnection) requestURL.openConnection();
-            urlConnection.set
         }
     };
 

@@ -41,12 +41,12 @@
         app:srcCompat="@drawable/_306618" />
 
     <EditText
-        android:id="@+id/edtTxtUserName"
+        android:id="@+id/edtTxtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="UserName"
+        android:hint="E-mail"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <EditText
-        android:id="@+id/edtTxtPsswd"
+        android:id="@+id/edtTxtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
@@ -66,10 +66,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail" />
 
     <Button
-        android:id="@+id/btnEntrar"
+        android:id="@+id/btnLogin"
         android:layout_width="111dp"
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
@@ -77,5 +77,5 @@
         android:text="Entrar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtPsswd" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
