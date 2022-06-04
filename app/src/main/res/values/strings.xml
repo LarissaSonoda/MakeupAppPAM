@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppMakeupPAM</string>
+    <string name="pesq">Pesquise por nome ou marca</string>
+    <string name="hello"><![CDATA[Olá <Username>!]]></string>
+</resources>
