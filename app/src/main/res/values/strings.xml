@@ -2,4 +2,11 @@
     <string name="app_name">AppMakeupPAM</string>
     <string name="pesq">Pesquise por nome ou marca</string>
     <string name="hello"><![CDATA[Olá <Username>!]]></string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="perfil">Perfil</string>
+    <string name="senha">Senha</string>
+    <string name="e_mail">E-mail</string>
+    <string name="nome">Nome</string>
+    <string name="a_beleza_est_em_voc">A beleza está em você</string>
+    <string name="makeup_daily">MakeUp Daily</string>
 </resources>
