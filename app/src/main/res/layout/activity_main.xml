@@ -78,4 +78,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
+
+    <TextView
+        android:id="@+id/txtcadastro"
+        android:layout_width="191dp"
+        android:layout_height="42dp"
+        android:fontFamily="@font/mina"
+        android:onClick="cadastro"
+        android:text="Não possui conta? Clique aqui e cadastre-se"
+        android:textColor="@color/bgCategory"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

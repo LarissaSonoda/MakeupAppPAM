@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:background="@null"
             app:srcCompat="@drawable/ic_search"
-            android:onClick="abrirProjeto"
+            android:onClick="search"
             tools:ignore="MissingConstraints" />
 
         <Space
