@@ -20,13 +20,21 @@
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/bottom_menu.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/ic_add_image.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/ic_home.xml" value="0.2285" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/ic_return.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/ic_search.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/ic_user.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/view_bottom_menu.xml" value="0.2285" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/view_category.xml" value="0.2285" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/drawable/view_menu.xml" value="0.2285" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_home.xml" value="0.278125" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_main.xml" value="0.24682971014492755" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_menu.xml" value="0.278125" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_pesquisa_cat.xml" value="0.23867753623188406" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_register.xml" value="0.2640625" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_user.xml" value="0.1" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/bottom_menu.xml" value="0.278125" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/listview_item.xml" value="0.22" />
+        <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/second_menu.xml" value="0.1" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/activity_menu.xml" value="0.13994565217391305" />
@@ -35,7 +43,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -12,21 +12,21 @@ import java.net.URL;
 
 public class NetworkUtils {
     private static final String LOG_TAG = NetworkUtils.class.getSimpleName();
-    private static final String MAKEUP_URL = "http://makeup-api.herokuapp.com/api/v1/products.json";
+    private static final String MAKEUP_URL = "http://makeup-api.herokuapp.com/api/v1/products.json?";
     private static final String QUERY_PARAM = "brand";
     private static final String MAX_RESULTS = "maxResults";
-    private static final String TIPO_IMPRESSAO = "printType";
+    private static final String TYPE_PRINT = "printType";
 
     static String searchMakeup(String queryString){
         HttpURLConnection urlConnection = null;
-        BufferedReader raader = null;
-        String makeupJSONString = null;
         BufferedReader reader = null;
+        String makeupJSONString = null;
+
         try{
             Uri builtURI = Uri.parse(MAKEUP_URL).buildUpon()
                     .appendQueryParameter(QUERY_PARAM, queryString)
-                    .appendQueryParameter(MAX_RESULTS, "10")
-                    .appendQueryParameter(TIPO_IMPRESSAO, "makeup")
+                    //.appendQueryParameter(MAX_RESULTS, "10")
+                    //.appendQueryParameter(TYPE_PRINT, "makeup")
                     .build();
             URL requestURL = new URL(builtURI.toString());
             urlConnection = (HttpURLConnection) requestURL.openConnection();
@@ -38,10 +38,10 @@ public class NetworkUtils {
             reader = new BufferedReader(new InputStreamReader(inputStream));
             // Usa o StringBuilder para receber a resposta.
             StringBuilder builder = new StringBuilder();
-            String linha;
-            while ((linha = reader.readLine()) != null) {
+            String line;
+            while ((line = reader.readLine()) != null) {
                 // Adiciona a linha a string.
-                builder.append(linha);
+                builder.append(line);
                 builder.append("\n");
             }
             if (builder.length() == 0) {

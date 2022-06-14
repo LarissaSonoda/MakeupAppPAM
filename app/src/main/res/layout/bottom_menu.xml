@@ -26,8 +26,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:onClick="openHome"
             app:srcCompat="@drawable/ic_home"
-            android:onClick="abrirHome"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -36,12 +36,12 @@
             android:layout_width="wrap_content"/>
 
         <ImageButton
-            android:id="@+id/itemMenu_projeto"
+            android:id="@+id/itemMenu_search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:onClick="openSearch"
             app:srcCompat="@drawable/ic_search"
-            android:onClick="search"
             tools:ignore="MissingConstraints" />
 
         <Space
@@ -50,12 +50,12 @@
             android:layout_width="wrap_content"/>
 
         <ImageButton
-            android:id="@+id/itemMenu_funcionario"
+            android:id="@+id/itemMenu_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@null"
+            android:onClick="openUser"
             app:srcCompat="@drawable/ic_user"
-            android:onClick="abrirFuncionario"
             tools:ignore="MissingConstraints" />
 
         <Space

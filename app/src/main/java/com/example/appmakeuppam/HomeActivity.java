@@ -3,7 +3,6 @@ package com.example.appmakeuppam;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,8 +13,10 @@ public class HomeActivity extends AppCompatActivity  {
         setContentView(R.layout.activity_home);
     }
 
-    public void search (View v){
-        Intent intent = new Intent(getApplicationContext(), PesquisaCatActivity.class);
+    public void openSearch (View v){
+        Intent intent = new Intent(getApplicationContext(), SearchProducts.class);
         startActivity(intent);
     }
+
+
 }

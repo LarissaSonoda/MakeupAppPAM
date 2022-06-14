@@ -11,4 +11,5 @@
     <color name="bgbox">#D8938C </color>
     <color name="bgView">#FFDCE2 </color>
     <color name="bgCategory">#FF7B6F </color>
+    <color name="button">#94495D</color>
 </resources>

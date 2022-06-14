@@ -1,11 +1,5 @@
 package com.example.appmakeuppam;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.loader.app.LoaderManager;
-import androidx.loader.content.Loader;
-
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -16,6 +10,12 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.loader.app.LoaderManager;
+import androidx.loader.content.Loader;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -23,46 +23,48 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PesquisaCatActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>  {
+public class SearchProducts extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>  {
 
     private EditText edtPesq;
+    ListView listViewProducts;
+    List<Product> listProduct;
+    Product product;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesquisa_cat);
+
         edtPesq = findViewById(R.id.edtPesq);
-        // List<Prod> prod = listAllProd();
-        ListView listView = findViewById(R.id.ListProd);
+
+        listViewProducts = findViewById(R.id.listProd);
+
+        //List<Prod> prod = listAllProd();
+
         if(getSupportLoaderManager().getLoader(0) != null) {
             getSupportLoaderManager().initLoader(0, null, this);
         }
     }
+
     public void searchProducts(View view){
         String queryString  = edtPesq.getText().toString();
 
-        // esconde o teclado qdo o botão é clicado
-        InputMethodManager inputManager = (InputMethodManager)
-                getSystemService(Context.INPUT_METHOD_SERVICE);
+        InputMethodManager inputManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
         if (inputManager != null) {
-            inputManager.hideSoftInputFromWindow(view.getWindowToken(),
-                    InputMethodManager.HIDE_NOT_ALWAYS);
+            inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
 
-        //Verificar a conexão com a internet
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = null;
+
         if (connMgr != null) {
             networkInfo = connMgr.getActiveNetworkInfo();
         }
-        if (networkInfo != null && networkInfo.isConnected()
-                && queryString.length() != 0) {
+        if (networkInfo != null && networkInfo.isConnected() && queryString.length() != 0) {
             Bundle queryBundle = new Bundle();
             queryBundle.putString("queryString", queryString);
-            //getSupportLoaderManager().restartLoader(0, queryBundle, this);
-            //Fazer lista de produtos: 06/06
+            getSupportLoaderManager().restartLoader(0, queryBundle, this);
         }
-        // atualiza a textview para informar que não há conexão ou termo de busca
         else {
             if (queryString.length() == 0) {
                 edtPesq.setText(R.string.no_search_term);
@@ -70,7 +72,6 @@ public class PesquisaCatActivity extends AppCompatActivity implements LoaderMana
                 edtPesq.setText(R.string.no_network);
             }
         }
-
     }
 
     @NonNull
@@ -80,44 +81,39 @@ public class PesquisaCatActivity extends AppCompatActivity implements LoaderMana
         if (args != null) {
             queryString = args.getString("queryString");
         }
-        return new CarregaProdutos(this, queryString);
+        return new LoadProducts(this, queryString);
     }
 
     @Override
     public void onLoadFinished(@NonNull Loader<String> loader, String data) {
         try {
-            // Converte a resposta em Json
             JSONObject jsonObject = new JSONObject(data);
-            // Obtem o JSONArray dos produtos
             JSONArray itemsArray = jsonObject.getJSONArray("items");
-            // inicializa o contador
+
             int i = 0;
             String name = null;
             String price = null;
-            String desc = null;
+            String description = null;
             String brand = null;
             String product_type = null;
-            // Procura resultados nos itens do array
-            while (i < itemsArray.length() &&
-                    (name == null && brand == null)) {
-                // Obtem a informação
+
+            while (i < itemsArray.length() && (name == null && brand == null)) {
                 JSONObject makeup = itemsArray.getJSONObject(i);
-                JSONObject makeupInfo = makeup.getJSONObject("makeup");
-                //  Obter dados do item
-                // erro se o campo estiver vazio
+                JSONObject makeupInfo = makeup.getJSONObject("makeupInfo");
+
                 try {
-                    name = makeupInfo.getString("info");
+                    name = makeupInfo.getString("name");
                     price = makeupInfo.getString("price");
-                    desc = makeupInfo.getString("description");
+                    description = makeupInfo.getString("description");
                     brand = makeupInfo.getString("brand");
-                    product_type = makeupInfo.getString("category");
+                    product_type = makeupInfo.getString("product_type");
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-                // move para a proxima linha
+
                 i++;
             }
-            //mostra o resultado qdo possivel.
+
             if (name != null && brand != null) {
                 ArrayList<String> array_list = new ArrayList<String>();
 
@@ -127,13 +123,11 @@ public class PesquisaCatActivity extends AppCompatActivity implements LoaderMana
                 your_array_list.add(price);
                 ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                         this,
-                        android.R.layout.simple_list_item_1,
+                        R.layout.listview_item,
                         your_array_list );
 
-                ListView listView = findViewById(R.id.ListProd);
+                ListView listView = findViewById(R.id.listProd);
                 listView.setAdapter(arrayAdapter);
-
-
             } else {
 
             }
@@ -149,5 +143,4 @@ public class PesquisaCatActivity extends AppCompatActivity implements LoaderMana
     public void onLoaderReset(@NonNull Loader<String> loader) {
 
     }
-
 }

@@ -61,7 +61,6 @@ public class RegisterActivity extends AppCompatActivity {
 
             try{
                 userDAO.insertUser(user);
-                Toast.makeText(getApplicationContext(), userName, Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), "Cadastro efetuado com sucesso", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getBaseContext(), MainActivity.class));
             } catch (Exception e) {
@@ -71,6 +70,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     // MANIPULAÇÃO DE IMAGENS
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
