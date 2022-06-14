@@ -12,4 +12,6 @@
     <string name="no_search_term">sem termo para busca</string>
     <string name="no_network">Sem conexão</string>
     <string name="str_empty">\" \"</string>
+    <string name="n_o_possui_conta_cadastre_se">Não possui conta? Cadastre-se</string>
+    <string name="entrar">Entrar</string>
 </resources>

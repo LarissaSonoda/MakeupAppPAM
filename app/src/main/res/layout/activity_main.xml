@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEDADB"
+    android:theme="@style/AppThemeNoActionBar"
     tools:context=".MainActivity" >
 
     <TextView
@@ -46,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="E-mail"
+        android:hint="@string/e_mail"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,7 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Senha"
+        android:hint="@string/senha"
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,20 +75,21 @@
         android:layout_height="53dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="#94495D "
-        android:text="Entrar"
+        android:text="@string/entrar"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
 
     <TextView
         android:id="@+id/txtcadastro"
-        android:layout_width="191dp"
+        android:layout_width="245dp"
         android:layout_height="42dp"
         android:fontFamily="@font/mina"
-        android:onClick="cadastro"
-        android:text="Não possui conta? Clique aqui e cadastre-se"
+        android:text="@string/n_o_possui_conta_cadastre_se"
         android:textColor="@color/bgCategory"
-        android:textSize="16sp"
+        android:textSize="14sp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

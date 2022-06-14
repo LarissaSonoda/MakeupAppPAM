@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -46,6 +47,7 @@ public class RegisterActivity extends AppCompatActivity {
         edtTxtPassword = findViewById(R.id.edtTxtPassword);
         imgViewUser = findViewById(R.id.imgViewUser);
 
+
         btnAddImage.setOnClickListener(v -> viewGallery());
 
         btnRegister.setOnClickListener(v-> {
@@ -59,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
 
             try{
                 userDAO.insertUser(user);
+                Toast.makeText(getApplicationContext(), userName, Toast.LENGTH_SHORT).show();
                 Toast.makeText(getApplicationContext(), "Cadastro efetuado com sucesso", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getBaseContext(), MainActivity.class));
             } catch (Exception e) {
@@ -77,6 +80,7 @@ public class RegisterActivity extends AppCompatActivity {
             try{
                 InputStream inputStream = getContentResolver().openInputStream(uri);
                 Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
+                imgViewUser.setVisibility(View.VISIBLE);
                 imgViewUser.setImageBitmap(bitmap);
             }
             catch (FileNotFoundException e){
