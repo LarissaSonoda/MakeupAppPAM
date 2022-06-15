@@ -31,6 +31,11 @@
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_menu.xml" value="0.278125" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_pesquisa_cat.xml" value="0.23867753623188406" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_register.xml" value="0.2640625" />
+<<<<<<< HEAD
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_main.xml" value="0.1272644927536232" />
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_menu.xml" value="0.18" />
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_pesquisa_cat.xml" value="0.16" />
+=======
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_user.xml" value="0.1" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/bottom_menu.xml" value="0.278125" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/listview_item.xml" value="0.22" />
@@ -40,6 +45,7 @@
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/activity_menu.xml" value="0.13994565217391305" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/activity_pesquisa_cat.xml" value="0.1" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/API App/app/src/main/res/layout/bottom_menu.xml" value="0.15579710144927536" />
+<<<<<<< HEAD
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/drawable/shape.xml" value="0.1685" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/layout/activity_home.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/layout/activity_menu.xml" value="0.1" />
@@ -48,6 +54,9 @@
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/layout/bottom_menu.xml" value="0.16032608695652173" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/layout/my_widget.xml" value="0.12364130434782608" />
         <entry key="..\:/Users/sonod_6ehjwcc/Desktop/BG 2022/PAM/MakeupAppPAM/app/src/main/res/layout/new_app_widget.xml" value="0.16032608695652173" />
+=======
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
+>>>>>>> 6f0e2ef65211f66d501d24ba355ec600d8b0e8f0
       </map>
     </option>
   </component>

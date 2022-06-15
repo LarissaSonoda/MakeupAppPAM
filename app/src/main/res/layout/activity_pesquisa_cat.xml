@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
+    android:background="@color/bg"
+    tools:context=".PesquisaCatActivity">
+=======
     tools:context=".SearchProducts"
     android:backgroundTint="@color/bg">
 
@@ -98,5 +102,11 @@
 
     </LinearLayout-->
 
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
+
+    <ListView
+        android:id="@+id/ListProd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

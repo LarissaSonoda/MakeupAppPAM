@@ -57,4 +57,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< HEAD
+    <ImageView
+        android:id="@+id/imgNotificações"
+        android:layout_width="33dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toEndOf="@+id/txtWelcome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/notifica__o"
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="TODO" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/shapeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"></LinearLayout>
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btnPesquisa"
+        android:layout_width="60dp"
+        android:layout_height="49dp"
+        android:backgroundTint="@color/bgbox"
+        android:contentDescription="@string/pesq"
+        app:icon="@android:drawable/ic_menu_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+    <ListView
+        android:id="@+id/ListProd"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"/>
+
+=======
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
 </androidx.constraintlayout.widget.ConstraintLayout>
