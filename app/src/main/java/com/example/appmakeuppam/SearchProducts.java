@@ -9,6 +9,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,8 +28,7 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
 
     private EditText edtPesq;
     ListView listViewProducts;
-    List<Product> listProduct;
-    Product product;
+   TextView nmProduct, nmBrand;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +36,9 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
         setContentView(R.layout.activity_pesquisa_cat);
 
         edtPesq = findViewById(R.id.edtPesq);
-
-        listViewProducts = findViewById(R.id.listProd);
+        nmProduct = findViewById(R.id.NameProduct);
+        nmBrand = findViewById(R.id.brand);
+        //listViewProducts = findViewById(R.id.listProd);
 
         //List<Prod> prod = listAllProd();
 
@@ -115,26 +116,15 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
             }
 
             if (name != null && brand != null) {
-                ArrayList<String> array_list = new ArrayList<String>();
-
-                List<String> your_array_list = new ArrayList<String>();
-                your_array_list.add(name);
-                your_array_list.add(brand);
-                your_array_list.add(price);
-                ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                        this,
-                        R.layout.listview_item,
-                        your_array_list );
-
-                ListView listView = findViewById(R.id.listProd);
-                listView.setAdapter(arrayAdapter);
+                nmProduct.setText(name);
+                nmBrand.setText(brand);
             } else {
 
             }
         } catch (Exception e) {
             // Se não receber um JSOn valido, informa ao usuário
             //.setText(R.string.no_results);
-            edtPesq.setText(R.string.str_empty);
+            nmProduct.setText(R.string.no_search_term);
             e.printStackTrace();
         }
     }

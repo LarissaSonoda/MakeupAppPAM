@@ -2,6 +2,7 @@ package com.example.appmakeuppam;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageButton;
 
 public class Menu extends SearchProducts {
@@ -12,7 +13,7 @@ public class Menu extends SearchProducts {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bottom_menu);
 
-        itemMenu_home = findViewById(R.id.itemMenu_home);
+        /*itemMenu_home = findViewById(R.id.itemMenu_home);
         itemMenu_search = findViewById(R.id.itemMenu_search);
         itemMenu_user = findViewById(R.id.itemMenu_user);
 
@@ -29,6 +30,8 @@ public class Menu extends SearchProducts {
         itemMenu_user.setOnClickListener(v -> {
             startActivity(new Intent(getBaseContext(), UserActivity.class));
             finish();
-        });
+        });*/
+
+
     }
 }

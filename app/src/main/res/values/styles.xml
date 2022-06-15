@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="AppThemeNoActionBar" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
     <style name="labelForms">
         <item name="android:layout_width">
             wrap_content
@@ -17,5 +19,15 @@
         <item name="android:textColor">
             @color/black
         </item>
+    </style>
+
+    <style name="Widget.AppMakeupPAM.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.AppMakeupPAM.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
     </style>
 </resources>

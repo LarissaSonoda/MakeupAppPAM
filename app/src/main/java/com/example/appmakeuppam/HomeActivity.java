@@ -17,6 +17,9 @@ public class HomeActivity extends AppCompatActivity  {
         Intent intent = new Intent(getApplicationContext(), SearchProducts.class);
         startActivity(intent);
     }
-
+public void openUser (View v){
+        Intent intent = new Intent(getApplicationContext(), UserActivity.class);
+        startActivity(intent);
+}
 
 }
