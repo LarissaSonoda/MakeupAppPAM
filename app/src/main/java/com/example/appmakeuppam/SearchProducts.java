@@ -36,8 +36,8 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
         setContentView(R.layout.activity_pesquisa_cat);
 
         edtPesq = findViewById(R.id.edtPesq);
-        nmProduct = findViewById(R.id.NameProduct);
-        nmBrand = findViewById(R.id.brand);
+        //nmProduct = findViewById(R.id.NameProduct);
+        //nmBrand = findViewById(R.id.brand);
         //listViewProducts = findViewById(R.id.listProd);
 
         //List<Prod> prod = listAllProd();
@@ -88,8 +88,8 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
     @Override
     public void onLoadFinished(@NonNull Loader<String> loader, String data) {
         try {
-            JSONObject jsonObject = new JSONObject(data);
-            JSONArray itemsArray = jsonObject.getJSONArray("items");
+            JSONArray jsonObject = new JSONArray(data);
+            JSONArray itemsArray = jsonObject.getJSONArray(Integer.parseInt("items"));
 
             int i = 0;
             String name = null;

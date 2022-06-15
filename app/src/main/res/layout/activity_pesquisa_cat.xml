@@ -4,89 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@color/bg"
-    tools:context=".PesquisaCatActivity">
-=======
     tools:context=".SearchProducts"
     android:backgroundTint="@color/bg">
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="414dp"
-        android:layout_height="106dp"
-        android:background="@color/bgbox"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include
+        android:id="@+id/menuTop"
+        layout="@layout/activity_menu" />
 
-    <EditText
-        android:id="@+id/edtPesq"
-        android:layout_width="314dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:ems="10"
-        android:hint="@string/pesq"
-        android:inputType="textPersonName"
-        android:textColorHint="#4E342E"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        android:autofillHints="" />
-
-    <ImageButton
-        android:id="@+id/imgBtnSearch"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="4dp"
-        android:backgroundTint="@color/bgbox"
-        android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/edtPesq"
-        android:onClick="searchProducts"
-        app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
-
-    <TextView
-        android:id="@+id/txtWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/hello"
-        android:textColor="#4E342E"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <TextView
-        android:id="@+id/NameProduct"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/menuTop"
-        app:layout_constraintVertical_bias="0.182" />
-
-    <TextView
-        android:id="@+id/brand"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/menuTop"
-        app:layout_constraintVertical_bias="0.235" />
-
-
-    <!--LinearLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -99,14 +25,5 @@
             app:layout_constraintStart_toStartOf="@+id/menu"
             app:layout_constraintTop_toBottomOf="@+id/edtPesq" />
 
-
-    </LinearLayout-->
-
->>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
-
-    <ListView
-        android:id="@+id/ListProd"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

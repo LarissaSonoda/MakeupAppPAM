@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:backgroundTint="@color/bg"
     tools:context=".Menu">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="414dp"
         android:layout_height="106dp"
-        android:background="@color/bgbox"
+        android:background="#D8938C "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +38,13 @@
         android:layout_width="52dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
-        android:backgroundTint="@color/bgbox"
         android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toBottomOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.058"
+        android:onClick="searchProducts"
         app:layout_constraintStart_toEndOf="@+id/edtPesq"
+        android:backgroundTint="@color/bgbox"
         app:srcCompat="?android:attr/actionModeWebSearchDrawable" />
 
     <TextView
@@ -57,7 +60,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<<<<<<< HEAD
     <ImageView
         android:id="@+id/imgNotificações"
         android:layout_width="33dp"
@@ -71,45 +73,4 @@
         tools:ignore="ImageContrastCheck"
         android:contentDescription="TODO" />
 
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="4dp"
-        android:contentDescription="@string/appbar_scrolling_view_behavior"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.432"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:id="@+id/shapeLayout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"></LinearLayout>
-
-    </HorizontalScrollView>
-
-    <Button
-        android:id="@+id/btnPesquisa"
-        android:layout_width="60dp"
-        android:layout_height="49dp"
-        android:backgroundTint="@color/bgbox"
-        android:contentDescription="@string/pesq"
-        app:icon="@android:drawable/ic_menu_search"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView4" />
-
-    <ListView
-        android:id="@+id/ListProd"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="invisible"/>
-
-=======
->>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
 </androidx.constraintlayout.widget.ConstraintLayout>

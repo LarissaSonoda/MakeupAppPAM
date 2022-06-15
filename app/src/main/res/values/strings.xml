@@ -9,21 +9,13 @@
     <string name="nome">Nome</string>
     <string name="a_beleza_est_em_voc">A beleza está em você</string>
     <string name="makeup_daily">MakeUp Daily</string>
-<<<<<<< HEAD
-    <string name="no_search_term">Termo não encontrado</string>
-    <string name="no_network">Sem conexão com a internet</string>
-=======
     <string name="no_search_term">sem termo para busca</string>
     <string name="no_network">Sem conexão</string>
     <string name="str_empty">\" \"</string>
     <string name="n_o_possui_conta_cadastre_se">Não possui conta? Cadastre-se</string>
     <string name="entrar">Entrar</string>
     <string name="visualizar">Visualizar</string>
-<<<<<<< HEAD
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="app_widget_description">This is an app widget description</string>
-=======
->>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
->>>>>>> 6f0e2ef65211f66d501d24ba355ec600d8b0e8f0
 </resources>

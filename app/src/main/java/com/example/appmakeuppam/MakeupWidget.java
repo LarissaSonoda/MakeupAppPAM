@@ -31,10 +31,10 @@ public class MakeupWidget extends AppWidgetProvider {
         A hierarquia é inflada a partir de um arquivo de recurso de layout, e esta classe fornece algumas
         operações básicas para modificar o conteúdo da hierarquia inflada.
          */
-        int m = new UserActivity().rating;
+        //int m = new UserActivity().rating();
 
         RemoteViews views = new RemoteViews(context.getPackageName(),R.layout.new_app_widget);
-        views.setProgressBar(R.id.avaliacaoWidget, 5, m, false);
+        views.setProgressBar(R.id.avaliacaoWidget, 5, 3, false);
         // Salva a contagem em shared preferences
         SharedPreferences.Editor preferenciasEditor = preferencias.edit();
         preferenciasEditor.putInt(COUNT_KEY + appWidgetId, count);
@@ -64,13 +64,6 @@ public class MakeupWidget extends AppWidgetProvider {
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
-    /**
-     * Override for onUpdate() method, to handle all widget update requests.
-     *
-     * @param context          The application context.
-     * @param appWidgetManager The app widget manager.
-     * @param appWidgetIds     An array of the app widget IDs.
-     */
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager,
                          int[] appWidgetIds) {
