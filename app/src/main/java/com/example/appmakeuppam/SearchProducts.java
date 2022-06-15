@@ -6,10 +6,10 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +21,12 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class SearchProducts extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String>  {
 
     private EditText edtPesq;
+    TextView  txtName, txtDescription;
     ListView listViewProducts;
-   TextView nmProduct, nmBrand;
+    TextView nmProduct, nmBrand;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +34,9 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
         setContentView(R.layout.activity_pesquisa_cat);
 
         edtPesq = findViewById(R.id.edtPesq);
+        txtName = findViewById(R.id.txtName);
+        txtDescription = findViewById(R.id.txtDescription);
+
         //nmProduct = findViewById(R.id.NameProduct);
         //nmBrand = findViewById(R.id.brand);
         //listViewProducts = findViewById(R.id.listProd);
@@ -65,6 +66,7 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
             Bundle queryBundle = new Bundle();
             queryBundle.putString("queryString", queryString);
             getSupportLoaderManager().restartLoader(0, queryBundle, this);
+            Toast.makeText(getApplicationContext(), "Procurando pelo produto...", Toast.LENGTH_SHORT).show();
         }
         else {
             if (queryString.length() == 0) {
@@ -87,44 +89,46 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
 
     @Override
     public void onLoadFinished(@NonNull Loader<String> loader, String data) {
+
+
+        String name = null;
+        String price = null;
+        String description = null;
+        String brand = null;
+        String product_type = null;
+
         try {
-            JSONArray jsonObject = new JSONArray(data);
-            JSONArray itemsArray = jsonObject.getJSONArray(Integer.parseInt("items"));
+            JSONArray jsonArray = new JSONArray(data);
+            String stringArray = jsonArray.toString();
+            String[] arrayProduct = stringArray.split(",");
 
-            int i = 0;
-            String name = null;
-            String price = null;
-            String description = null;
-            String brand = null;
-            String product_type = null;
+            JSONObject jsonObject = new JSONObject();
 
-            while (i < itemsArray.length() && (name == null && brand == null)) {
-                JSONObject makeup = itemsArray.getJSONObject(i);
-                JSONObject makeupInfo = makeup.getJSONObject("makeupInfo");
+            jsonObject.put("name", arrayProduct[2]);
+            jsonObject.put("price", arrayProduct[3]);
+            jsonObject.put("description", arrayProduct[13]);
+            jsonObject.put("brand", arrayProduct[1]);
+            jsonObject.put("product_type", arrayProduct[19]);
 
-                try {
-                    name = makeupInfo.getString("name");
-                    price = makeupInfo.getString("price");
-                    description = makeupInfo.getString("description");
-                    brand = makeupInfo.getString("brand");
-                    product_type = makeupInfo.getString("product_type");
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+            try {
+                name = jsonObject.getString("name");
+                price = jsonObject.getString("price");
+                description = jsonObject.getString("description");
+                brand = jsonObject.getString("brand");
+                product_type = jsonObject.getString("product_type");
 
-                i++;
+                txtName.setText(name);
+                txtDescription.setText(description);
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
 
-            if (name != null && brand != null) {
-                nmProduct.setText(name);
-                nmBrand.setText(brand);
-            } else {
-
+            if(name != null && price != null && description != null && brand != null && product_type != null){
+                getSupportLoaderManager().destroyLoader(0);
             }
+
         } catch (Exception e) {
-            // Se não receber um JSOn valido, informa ao usuário
-            //.setText(R.string.no_results);
-            nmProduct.setText(R.string.no_search_term);
+            Toast.makeText(getApplicationContext(), "Não encontramos seu produto.", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
@@ -133,4 +137,5 @@ public class SearchProducts extends AppCompatActivity implements LoaderManager.L
     public void onLoaderReset(@NonNull Loader<String> loader) {
 
     }
+
 }
