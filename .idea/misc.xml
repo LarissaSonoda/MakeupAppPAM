@@ -11,10 +11,13 @@
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_home.xml" value="0.278125" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_main.xml" value="0.24682971014492755" />
         <entry key="..\:/Users/pc/Desktop/BG 2022/PAM/AppMakeup/MakeupAppPAM/app/src/main/res/layout/activity_register.xml" value="0.2640625" />
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_main.xml" value="0.1272644927536232" />
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_menu.xml" value="0.18" />
+        <entry key="..\:/Users/sonod_6ehjwcc/Desktop/MakeupAppPAM/app/src/main/res/layout/activity_pesquisa_cat.xml" value="0.16" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

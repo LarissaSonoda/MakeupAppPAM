@@ -9,4 +9,6 @@
     <string name="nome">Nome</string>
     <string name="a_beleza_est_em_voc">A beleza está em você</string>
     <string name="makeup_daily">MakeUp Daily</string>
+    <string name="no_search_term">Termo não encontrado</string>
+    <string name="no_network">Sem conexão com a internet</string>
 </resources>
