@@ -1,8 +1,11 @@
 package com.example.appmakeuppam;
 
+<<<<<<< HEAD:app/src/main/java/com/example/appmakeuppam/PesquisaCatActivity.java
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+=======
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7:app/src/main/java/com/example/appmakeuppam/UserActivity.java
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,11 +15,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PesquisaCatActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class UserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD:app/src/main/java/com/example/appmakeuppam/PesquisaCatActivity.java
         setContentView(R.layout.activity_pesquisa_cat);
 
         List<Prod> prod = listAllProd();
@@ -49,5 +55,8 @@ public class PesquisaCatActivity extends AppCompatActivity {
 
 //métodos
 
+=======
+        setContentView(R.layout.activity_user);
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7:app/src/main/java/com/example/appmakeuppam/UserActivity.java
     }
 }

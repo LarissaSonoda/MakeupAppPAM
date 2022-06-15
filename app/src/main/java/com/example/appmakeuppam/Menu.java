@@ -1,5 +1,6 @@
 package com.example.appmakeuppam;
 
+<<<<<<< HEAD
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,11 +24,19 @@ import java.util.List;
 
 public class Menu extends AppCompatActivity implements LoaderManager.LoaderCallbacks<String> {
     private EditText edtPesq;
+=======
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.ImageButton;
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
 
+public class Menu extends SearchProducts {
 
+    ImageButton itemMenu_home, itemMenu_search, itemMenu_user;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD
         setContentView(R.layout.activity_menu);
         edtPesq = findViewById(R.id.edtPesq);
         List<Prod> prod = listAllProd();
@@ -139,5 +148,27 @@ public class Menu extends AppCompatActivity implements LoaderManager.LoaderCallb
     @Override
     public void onLoaderReset(@NonNull Loader<String> loader) {
 
+=======
+        setContentView(R.layout.bottom_menu);
+
+        itemMenu_home = findViewById(R.id.itemMenu_home);
+        itemMenu_search = findViewById(R.id.itemMenu_search);
+        itemMenu_user = findViewById(R.id.itemMenu_user);
+
+        itemMenu_home.setOnClickListener(v -> {
+            startActivity(new Intent(getBaseContext(), HomeActivity.class));
+            finish();
+        });
+
+        itemMenu_search.setOnClickListener(v -> {
+            startActivity(new Intent(getBaseContext(), SearchProducts.class));
+            finish();
+        });
+
+        itemMenu_user.setOnClickListener(v -> {
+            startActivity(new Intent(getBaseContext(), UserActivity.class));
+            finish();
+        });
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
     }
 }

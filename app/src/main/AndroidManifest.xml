@@ -3,7 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.appmakeuppam">
 
+<<<<<<< HEAD
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+=======
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+>>>>>>> ce568d7a06faf1c5c49a547a72d0a5f2c45aede7
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -15,13 +21,16 @@
         android:theme="@style/Theme.AppMakeupPAM"
         tools:targetApi="31">
         <activity
+            android:name=".UserActivity"
+            android:exported="false" />
+        <activity
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".PesquisaCatActivity"
+            android:name=".SearchProducts"
             android:exported="false" />
         <activity
             android:name=".Menu"

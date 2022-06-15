@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String FILE_NAME = "usuarioLogado.json";
     private EditText edtTxtEmail, edtTxtPassword;
+    private TextView txtcadastro;
     private Button btnLogin;
     private UserDAO userDAO;
 
@@ -31,7 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         edtTxtEmail = findViewById(R.id.edtTxtEmail);
         edtTxtPassword = findViewById(R.id.edtTxtPassword);
+        txtcadastro = findViewById(R.id.txtcadastro);
         btnLogin = findViewById(R.id.btnLogin);
+
 
         btnLogin.setOnClickListener(v -> {
             String emailLogin = String.valueOf(edtTxtEmail.getText());
@@ -54,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
             else{
                 Toast.makeText(MainActivity.this, "Usuário ou senha não correspondem", Toast.LENGTH_SHORT).show();
             }
+        });
+
+        txtcadastro.setOnClickListener(v -> {
+            Intent intent = new Intent(this, RegisterActivity.class);
+            startActivity(intent);
         });
     }
 

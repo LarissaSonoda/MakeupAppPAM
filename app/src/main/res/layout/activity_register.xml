@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#EEDADB"
-    android:theme="@style/AppThemeNoActionBar"
-    tools:context=".MainActivity" >
+    tools:context=".RegisterActivity" >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="80dp"
         android:fontFamily="@font/lovers_quarrel"
         android:text="@string/makeup_daily"
         android:textSize="60sp"
@@ -42,26 +41,37 @@
         app:srcCompat="@drawable/_306618" />
 
     <EditText
-        android:id="@+id/edtTxtEmail"
+        android:id="@+id/edtTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
         android:ems="10"
-        android:hint="@string/e_mail"
+        android:hint="@string/nome"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:ignore="TextFields" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <EditText
+        android:id="@+id/edtTxtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/e_mail"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtName" />
 
     <EditText
         android:id="@+id/edtTxtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
         android:ems="10"
+        android:layout_marginTop="20dp"
         android:hint="@string/senha"
         android:inputType="textPassword"
         android:minHeight="48dp"
@@ -70,30 +80,48 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edtTxtEmail" />
 
-    <Button
-        android:id="@+id/btnLogin"
-        android:layout_width="111dp"
-        android:layout_height="53dp"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_marginTop="20dp"
-        android:backgroundTint="#94495D "
-        android:text="@string/entrar"
-        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword">
 
-    <TextView
-        android:id="@+id/txtcadastro"
-        android:layout_width="245dp"
-        android:layout_height="42dp"
-        android:fontFamily="@font/mina"
-        android:text="@string/n_o_possui_conta_cadastre_se"
-        android:textColor="@color/bgCategory"
-        android:textSize="14sp"
-        android:textAlignment="center"
+        <ImageButton
+            android:id="@+id/btnAddImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@null"
+            app:srcCompat="@drawable/ic_add_image" />
+
+        <TextView
+            style="@style/labelForms"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="0dp"
+            android:text="@string/perfil" />
+
+        <ImageView
+            android:id="@+id/imgViewUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@android:drawable/editbox_background" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="150dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#94495D"
+        android:text="@string/cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
-
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtPassword" />
 </androidx.constraintlayout.widget.ConstraintLayout>
