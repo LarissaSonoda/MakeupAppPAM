@@ -2,6 +2,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:description="@string/app_widget_description"
     android:initialKeyguardLayout="@layout/my_widget"
+    android:initialLayout="@layout/my_widget"
     android:minHeight="72dp"
-    android:minWidth="1000dp"
+    android:minWidth="150dp"
     android:updatePeriodMillis="400000"/>
